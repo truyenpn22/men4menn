@@ -1,8 +1,9 @@
 import React from "react"
 
 import Breadcrumb from "../components/Breadcrumb"
-
+import { useTranslation } from 'react-i18next'
 const Contact = () => {
+  const { t } = useTranslation()
   return (
     <>
       <Breadcrumb pageName="Contact" />
@@ -10,7 +11,7 @@ const Contact = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h2 className="h3 mb-3 text-black">"Send_contact_to_MEN4MEN"</h2>
+              <h2 className="h3 mb-3 text-black">{t('content.Send_contact_to_MEN4MEN')}</h2>
             </div>
             <div className="col-md-7">
               <form action="#" method="post">
@@ -18,7 +19,7 @@ const Contact = () => {
                   <div className="form-group row">
                     <div className="col-md-6">
                       <label htmlFor="c_fname" className="text-black">
-                      first_name <span className="text-danger">*</span>
+                      {t('content.first_name')} <span className="text-danger">*</span>
                       </label>
                       <input
                         type="text"
@@ -29,7 +30,7 @@ const Contact = () => {
                     </div>
                     <div className="col-md-6">
                       <label htmlFor="c_lname" className="text-black">
-                      last_name <span className="text-danger">*</span>
+                      {t('content.last_name')} <span className="text-danger">*</span>
                       </label>
                       <input
                         type="text"
@@ -42,7 +43,7 @@ const Contact = () => {
                   <div className="form-group row">
                     <div className="col-md-12">
                       <label htmlFor="c_email" className="text-black">
-                      email <span className="text-danger">*</span>
+                      {t('content.email')} <span className="text-danger">*</span>
                       </label>
                       <input
                         type="email"
@@ -57,7 +58,7 @@ const Contact = () => {
                   <div className="form-group row">
                     <div className="col-md-12">
                       <label htmlFor="c_message" className="text-black">
-                      Content
+                      {t('content.Content')}
                       </label>
                       <textarea
                         name="c_message"
@@ -84,15 +85,15 @@ const Contact = () => {
             <div className="col-md-5 ml-auto">
               <div className="p-4 border mb-3">
                 <span className="d-block text-primary h6 text-uppercase">
-                Address
+                {t('content.Address')}
                 </span>
                 <p className="mb-0">
-                Building P, Quang Trung Software Park, District 12, Ho Chi Minh City
+                {t('content.Building P, Quang Trung Software Park, District 12, Ho Chi Minh City')}
                 </p>
               </div>
               <div className="p-4 border mb-3">
                 <span className="d-block text-primary h6 text-uppercase">
-                phone
+                {t('content.phone')}
                 </span>
                 <p className="mb-0">
                   +84 389 927 903
